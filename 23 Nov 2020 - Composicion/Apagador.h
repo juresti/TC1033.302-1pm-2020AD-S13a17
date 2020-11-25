@@ -3,6 +3,7 @@
 #ifndef APAGADOR_C
 #define APAGADOR_C
 
+#include <iostream>
 #include <string>
 using namespace std;
 class Apagador{
@@ -10,6 +11,10 @@ private:
     bool encendido;
 public:
     Apagador(){encendido = false;}
+    ~Apagador(){//Procesos para liberar recursos
+        cout << "Destruyendo Apagador";
+    }
+
     bool isEncendido(){return encendido;}
     void encender(){encendido = true;}
     void apagar(){encendido = false;}
@@ -19,7 +24,7 @@ public:
         string estado {};
         if (isEncendido()) {estado = "encendido";}
         else {estado = "apagado";}
-        return "Apagador. Se encuentra " + estado + "\n";
+        return "Apagador. Se encuentra " + estado;
     }
 }; //Clase Apagador
 
