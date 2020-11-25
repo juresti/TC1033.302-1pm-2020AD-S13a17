@@ -39,5 +39,12 @@ int main(int argc, char const *argv[])
     cout << lamp2.print() << endl;
     cout << lamp2.colorFoco() << endl;
     cout << lamp2.luminosidadFoco() << endl;
+
+    cout << "\nParte extra del foco\n";
+    Foco focoQ = lamp2.getFoco();
+    cout << lamp2.print() << endl;
+    cout << focoQ.print() << endl;
+
+    string color = lamp1.getFoco().getColor();
     return 0;
 }

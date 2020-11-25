@@ -30,6 +30,7 @@ public:
 
     string getColor(){return color;}
     float getCosto(){return costo;}
+    Foco getFoco(){return foco;}
 
     void setCosto(float c){costo = c;}
 
